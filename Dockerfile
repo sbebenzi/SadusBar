@@ -2,7 +2,8 @@
 FROM maven:3.9.6-eclipse-temurin-17 AS builder
 WORKDIR /app
 COPY . .
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -q
+
 
 # Etapa de execução
 FROM eclipse-temurin:17-jdk
