@@ -10,8 +10,8 @@ services:
       - db
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/sadus
-      SPRING_DATASOURCE_USERNAME: usuario
-      SPRING_DATASOURCE_PASSWORD: senha
+      SPRING_DATASOURCE_USERNAME: saducao
+      SPRING_DATASOURCE_PASSWORD: saducao
     networks:
       - rede
 
@@ -21,8 +21,8 @@ services:
     restart: always
     environment:
       POSTGRES_DB: sadus
-      POSTGRES_USER: usuario
-      POSTGRES_PASSWORD: senha
+      POSTGRES_USER: saducao
+      POSTGRES_PASSWORD: saducao
     ports:
       - "5432:5432"
     volumes:
